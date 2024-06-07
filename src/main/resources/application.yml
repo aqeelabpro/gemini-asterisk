@@ -1,0 +1,54 @@
+ffmpeg:
+  path: /opt/homebrew/bin/ffmpeg
+
+logging:
+  config: config/log4j2.xml
+  file:
+    name: ../log/onebrain-voice.log
+
+server:
+  port: 8800
+
+#spring:
+#  datasource:
+#    url: jdbc:postgresql://localhost:5433/postgres
+#    username: postgres
+#    password: aMT55vgRyswu
+#    driver-class-name: org.postgresql.Driver
+#  jpa:
+#    open-in-view: false
+#    hibernate:
+#      ddl-auto: update
+#    show-sql: false
+#    properties:
+#      hibernate:
+#        format_sql: true
+#    database: postgresql
+#    database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+asterisk:
+  agi:
+    host: 127.0.0.1
+    port: 9000
+    poolSize: 500
+    maximumPoolSize: 3000
+  ami:
+    host: 127.0.0.1
+    username: cxpanel
+    password: cxmanager*con
+
+originate:
+  originateTrunk: piecebyte
+  originateContext: OUTBOUND_DIALER
+  originateExtension: s
+
+audio:
+  path: /var/lib/asterisk/sounds/en
+
+google:
+  credentials:
+    file:
+      path: /home/ubuntu/groovy-treat-423916-c7-969d5c72f20c.json
+  gemini:
+    geminiApiUrl: "https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key="
+    geminiApiKey: "AIzaSyBkD9e_satW0FaU1G4ytb0_7xGs6BlAGSE"

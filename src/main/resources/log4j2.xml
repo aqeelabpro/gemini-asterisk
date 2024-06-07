@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration statusEntity="warn" monitorInterval="30">
+    <Properties>
+        <Property name="LOG-PATH">
+            ../log
+        </Property>
+        <Property name="LOG_PATTERN">
+            %d{yyyy-MM-dd HH:mm:ss.SSS} %p - %c %L : %m%n%ex
+        </Property>
+        <Property name="STATS_PATTERN">
+            %m%n
+        </Property>
+        <Property name="TRANSACTION_PATTERN">
+            %m%n
+        </Property>
+        <Property name="DATETIME_PATTERN">
+            %d{yyyy-MM-dd HH}-%i
+        </Property>
+        <Property name="DATE_PATTERN">
+            %d{yyyy-MM-dd}-%i
+        </Property>
+
+    </Properties>
+    <Appenders>
+        <Console name="ConsoleAppender" target="SYSTEM_OUT" follow="true">
+            <PatternLayout pattern="${LOG_PATTERN}"/>
+        </Console>
+        <RollingFile name="OneBrainVoiceAppender" fileName="${LOG-PATH}/onebrain-voice.log"
+                     filePattern="${LOG-PATH}/onebrain-voice-${DATE_PATTERN}.log.zip" append="true">
+            <PatternLayout pattern="${LOG_PATTERN}"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy/>
+                <SizeBasedTriggeringPolicy size="50 MB"/>
+            </Policies>
+            <DefaultRolloverStrategy max="10"/>
+        </RollingFile>
+        <RollingFile name="OneBrainVoiceErrorAppender" fileName="${LOG-PATH}/onebrain-voice-error.log"
+                     filePattern="${LOG-PATH}/onebrain-voice-error-${DATE_PATTERN}.log.zip" append="true">
+            <PatternLayout pattern="${LOG_PATTERN}"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy/>
+                <SizeBasedTriggeringPolicy size="50 MB"/>
+            </Policies>
+            <DefaultRolloverStrategy max="10"/>
+        </RollingFile>
+    </Appenders>
+    <Loggers>
+
+        <Logger name="org.asteriskjava.manager.internal.EventBuilderImpl" level="info" additivity="false">
+            <AppenderRef ref="OneBrainVoiceErrorAppender" level="error"/>
+        </Logger>
+
+        <Logger name="com.onebrain" level="info" additivity="false">
+            <AppenderRef ref="ConsoleAppender" level="info"/>
+            <AppenderRef ref="OneBrainVoiceAppender" level="info"/>
+            <AppenderRef ref="OneBrainVoiceErrorAppender" level="error"/>
+        </Logger>
+
+        <Root level="info">
+            <AppenderRef ref="ConsoleAppender" level="info"/>
+            <AppenderRef ref="OneBrainVoiceAppender" level="info"/>
+            <AppenderRef ref="OneBrainVoiceErrorAppender" level="error"/>
+        </Root>
+    </Loggers>
+</Configuration>
