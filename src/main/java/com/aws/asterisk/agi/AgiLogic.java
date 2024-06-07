@@ -49,7 +49,7 @@ public class AgiLogic {
             textToSpeech.setLanguageName(channel.getVariable("LANG_NAME"));
 
             String fileName = speechService.convertTextInToSpeech(textToSpeech);
-            channel.setVariable("RECORDING_FILE_NAME", fileName);
+            channel.setVariable("ANSWER_FILE", fileName);
             log.info("textToSpeech AGI completed");
         } catch (AgiException | IOException ex) {
             log.error("AgiLogic: textToSpeech(): Exception: {}", ex.getMessage());
