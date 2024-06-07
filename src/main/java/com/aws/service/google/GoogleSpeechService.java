@@ -42,7 +42,7 @@ public class GoogleSpeechService implements IGoogleSpeech {
         GoogleCredentials credentials = GoogleCredentials.fromStream(new FileInputStream(GOOGLE_CREDENTIALS_FILE_PATH));
         try (TextToSpeechClient textToSpeechClient = TextToSpeechClient.create(
                 TextToSpeechSettings.newBuilder().setCredentialsProvider(() -> credentials).build())) {
-            SynthesisInput input = SynthesisInput.newBuilder().setText(googleSpeech.getText()).build();
+            SynthesisInput input = SynthesisInput.newBuilder().setText(googleSpeech.getText().replaceAll("[^a-zA-Z0-9._-]","")).build();
             VoiceSelectionParams voice = VoiceSelectionParams.newBuilder()
                     .setSsmlGender(SsmlVoiceGender.FEMALE)
                     .setName(googleSpeech.getLanguageName())

@@ -4,7 +4,7 @@ ffmpeg:
 logging:
   config: config/log4j2.xml
   file:
-    name: ../log/onebrain-voice.log
+    name: ../log/google-speech.log
 
 server:
   port: 8800

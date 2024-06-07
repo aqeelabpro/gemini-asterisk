@@ -25,8 +25,8 @@
         <Console name="ConsoleAppender" target="SYSTEM_OUT" follow="true">
             <PatternLayout pattern="${LOG_PATTERN}"/>
         </Console>
-        <RollingFile name="OneBrainVoiceAppender" fileName="${LOG-PATH}/onebrain-voice.log"
-                     filePattern="${LOG-PATH}/onebrain-voice-${DATE_PATTERN}.log.zip" append="true">
+        <RollingFile name="OneBrainVoiceAppender" fileName="${LOG-PATH}/google-speech.log"
+                     filePattern="${LOG-PATH}/google-speech-${DATE_PATTERN}.log.zip" append="true">
             <PatternLayout pattern="${LOG_PATTERN}"/>
             <Policies>
                 <TimeBasedTriggeringPolicy/>
@@ -34,8 +34,8 @@
             </Policies>
             <DefaultRolloverStrategy max="10"/>
         </RollingFile>
-        <RollingFile name="OneBrainVoiceErrorAppender" fileName="${LOG-PATH}/onebrain-voice-error.log"
-                     filePattern="${LOG-PATH}/onebrain-voice-error-${DATE_PATTERN}.log.zip" append="true">
+        <RollingFile name="OneBrainVoiceErrorAppender" fileName="${LOG-PATH}/google-speech-error.log"
+                     filePattern="${LOG-PATH}/google-speech-error-${DATE_PATTERN}.log.zip" append="true">
             <PatternLayout pattern="${LOG_PATTERN}"/>
             <Policies>
                 <TimeBasedTriggeringPolicy/>
