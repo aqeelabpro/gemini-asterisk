@@ -8,24 +8,7 @@ logging:
 
 server:
   port: 8800
-
-#spring:
-#  datasource:
-#    url: jdbc:postgresql://localhost:5433/postgres
-#    username: postgres
-#    password: aMT55vgRyswu
-#    driver-class-name: org.postgresql.Driver
-#  jpa:
-#    open-in-view: false
-#    hibernate:
-#      ddl-auto: update
-#    show-sql: false
-#    properties:
-#      hibernate:
-#        format_sql: true
-#    database: postgresql
-#    database-platform: org.hibernate.dialect.PostgreSQLDialect
-
+  
 asterisk:
   agi:
     host: 127.0.0.1
@@ -34,8 +17,8 @@ asterisk:
     maximumPoolSize: 3000
   ami:
     host: 127.0.0.1
-    username: cxpanel
-    password: cxmanager*con
+    username: <will be provided upon request as it gives complete access to the asterisk pbx>
+    password: <will be provided upon request as it gives complete access to the asterisk pbx>
 
 originate:
   originateTrunk: piecebyte
@@ -48,7 +31,7 @@ audio:
 google:
   credentials:
     file:
-      path: /home/ubuntu/groovy-treat-423916-c7-969d5c72f20c.json
+      path: /home/ubuntu/google-auth.json
   gemini:
     geminiApiUrl: "https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key="
     geminiApiKey: "AIzaSyBkD9e_satW0FaU1G4ytb0_7xGs6BlAGSE"
