@@ -1,4 +1,4 @@
-package com.aws.config.spring;
+package com.google.config.spring;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

@@ -1,7 +1,7 @@
-package com.aws.controller.tts;
+package com.google.controller.tts;
 
-import com.aws.dto.SpeechDto;
-import com.aws.service.google.GoogleSpeechService;
+import com.google.dto.SpeechDto;
+import com.google.service.google.GoogleSpeechService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 

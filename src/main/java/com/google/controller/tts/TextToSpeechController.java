@@ -1,7 +1,7 @@
-package com.aws.controller.tts;
+package com.google.controller.tts;
 
-import com.aws.service.ffmpeg.FfmpegService;
-import com.aws.service.tts.TextToSpeechService;
+import com.google.service.ffmpeg.FfmpegService;
+import com.google.service.tts.TextToSpeechService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

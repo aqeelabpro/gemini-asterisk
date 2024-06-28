@@ -1,4 +1,4 @@
-package com.aws.service.tts;
+package com.google.service.tts;
 
 import com.amazonaws.services.polly.AmazonPolly;
 import com.amazonaws.services.polly.model.OutputFormat;

@@ -1,6 +1,6 @@
-package com.aws.asterisk.ami;
+package com.google.asterisk.ami;
 
-import com.aws.asterisk.AsteriskProperties;
+import com.google.asterisk.AsteriskProperties;
 import org.asteriskjava.manager.DefaultManagerConnection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;

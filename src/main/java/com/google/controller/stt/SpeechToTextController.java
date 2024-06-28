@@ -1,6 +1,6 @@
-package com.aws.controller.stt;
+package com.google.controller.stt;
 
-import com.aws.service.stt.SpeechToTextService;
+import com.google.service.stt.SpeechToTextService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;

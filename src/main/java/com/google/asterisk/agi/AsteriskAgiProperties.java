@@ -1,4 +1,4 @@
-package com.aws.asterisk.agi;
+package com.google.asterisk.agi;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

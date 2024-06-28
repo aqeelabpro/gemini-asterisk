@@ -1,4 +1,4 @@
-package com.aws.asterisk;
+package com.google.asterisk;
 
 import jakarta.annotation.PostConstruct;
 import jakarta.annotation.PreDestroy;

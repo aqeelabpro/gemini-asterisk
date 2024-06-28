@@ -1,6 +1,6 @@
-package com.aws.asterisk.config;
+package com.google.asterisk.config;
 
-import com.aws.asterisk.AsteriskProperties;
+import com.google.asterisk.AsteriskProperties;
 import lombok.Data;
 import org.asteriskjava.manager.ManagerConnection;
 import org.asteriskjava.manager.ManagerConnectionFactory;

@@ -1,4 +1,4 @@
-package com.aws.config.aws;
+package com.google.config.aws;
 
 import com.amazonaws.auth.DefaultAWSCredentialsProviderChain;
 import com.amazonaws.regions.Regions;

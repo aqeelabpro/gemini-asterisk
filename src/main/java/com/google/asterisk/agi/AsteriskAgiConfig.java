@@ -1,8 +1,8 @@
-package com.aws.asterisk.agi;
+package com.google.asterisk.agi;
 
 
-import com.aws.asterisk.AsteriskProperties;
-import com.aws.asterisk.agi.strategy.AsteriskMappingStrategy;
+import com.google.asterisk.AsteriskProperties;
+import com.google.asterisk.agi.strategy.AsteriskMappingStrategy;
 import org.asteriskjava.fastagi.AgiServerThread;
 import org.asteriskjava.fastagi.DefaultAgiServer;
 import org.springframework.beans.factory.annotation.Autowired;

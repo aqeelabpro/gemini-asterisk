@@ -1,7 +1,7 @@
-package com.aws.dto.gemini.response.dto;
+package com.google.dto.gemini.response.dto;
 
-import com.aws.dto.gemini.Candidate;
-import com.aws.dto.gemini.UsageMetadata;
+import com.google.dto.gemini.Candidate;
+import com.google.dto.gemini.UsageMetadata;
 import lombok.Data;
 
 import java.util.List;

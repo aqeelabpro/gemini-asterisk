@@ -1,6 +1,6 @@
-package com.aws.service.ffmpeg;
+package com.google.service.ffmpeg;
 
-import com.aws.properties.FfmpegProperties;
+import com.google.properties.FfmpegProperties;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

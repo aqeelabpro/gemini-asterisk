@@ -1,4 +1,4 @@
-package com.aws.properties;
+package com.google.properties;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;

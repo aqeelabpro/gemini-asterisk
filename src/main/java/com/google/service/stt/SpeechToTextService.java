@@ -1,4 +1,4 @@
-package com.aws.service.stt;
+package com.google.service.stt;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;

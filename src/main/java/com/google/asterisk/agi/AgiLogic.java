@@ -1,8 +1,8 @@
-package com.aws.asterisk.agi;
+package com.google.asterisk.agi;
 
-import com.aws.dto.SpeechDto;
-import com.aws.service.google.GoogleSpeechService;
-import com.aws.service.google.gemini.GeminiService;
+import com.google.dto.SpeechDto;
+import com.google.service.google.GoogleSpeechService;
+import com.google.service.google.gemini.GeminiService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.asteriskjava.fastagi.AgiChannel;
