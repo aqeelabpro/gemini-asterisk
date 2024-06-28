@@ -34,4 +34,4 @@ google:
       path: /home/ubuntu/google-auth.json
   gemini:
     geminiApiUrl: "https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key="
-    geminiApiKey: "AIzaSyBkD9e_satW0FaU1G4ytb0_7xGs6BlAGSE"
+    geminiApiKey: "REPLACE WITH YOUR OWN GEMINI API KEY"
