@@ -17,8 +17,8 @@ asterisk:
     maximumPoolSize: 3000
   ami:
     host: 127.0.0.1
-    username: <will be provided upon request as it gives complete access to the asterisk pbx>
-    password: <will be provided upon request as it gives complete access to the asterisk pbx>
+    username: <replace it with your own virtual machine Manager Username>
+    password: <replace it with your own virtual machine Manager Username>
 
 originate:
   originateTrunk: piecebyte
