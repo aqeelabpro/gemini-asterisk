@@ -11,6 +11,13 @@ cd gemini-asterisk
 ```
 open in your favorite editor or IDE
 
+After Opening, checkout in the gemini branch
+
+```
+git checkout gemini
+
+```
+
 # Prerequisites
 
 - FreePBX installed
