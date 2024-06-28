@@ -18,7 +18,7 @@ asterisk:
   ami:
     host: 127.0.0.1
     username: <replace it with your own virtual machine Manager Username>
-    password: <replace it with your own virtual machine Manager Username>
+    password: <replace it with your own virtual machine Manager Password>
 
 originate:
   originateTrunk: piecebyte
