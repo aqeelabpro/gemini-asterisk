@@ -40,7 +40,7 @@ open in your favourite editor or IDE
 - Inside the `config` folder, create 2 files application,yml and paste content from this Java Application
 - Inside the Same `config` folder, create another file `log4j2.xml` and paste `log4j2.xml` from this Java Application
 - Create a log folder, let's say the main folder `gemini-asterisk` is in /home/ubuntu, create log folder in same /home/ubuntu
-- 
+- You also have to have a `google-auth.json` file and replace its path in the `application.yml` file
 
 # Download All FreePBX modules
 - Goto `Admin Tab` as shown in `Figure.1`
