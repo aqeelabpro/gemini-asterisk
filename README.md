@@ -35,11 +35,10 @@ open in your favourite editor or IDE
 - Goto Config Edit in the Admin tab in FreePBX(you will have to download config edit module)
 - Paste the code provided at the end to the `extensions_custom.conf` file, and click `Save` button and the `Apply Config` button at the top
 - create `Jar file` from this Application and upload to server
-- Create a main folder like `gemini-asterisk`
+- Create a main folder like `gemini-asterisk` inside your home dir or whereever you want and also create relevant folders and files in the respective folder as described below
 - Inside `gemini-asterisk` folder, create 2 folders, `config` and `bin`
 - Inside the `config` folder, create a file `application.yml` and paste content from this Java Application
 - Inside the Same `config` folder, create another file `log4j2.xml` and paste `log4j2.xml` from this Java Application
-- Create a log folder, let's say the main folder `gemini-asterisk` is in /home/ubuntu, create log folder in same /home/ubuntu
 - You also have to have a `google-auth.json` file and replace its path in the `application.yml` file
 
 # Download All FreePBX modules
