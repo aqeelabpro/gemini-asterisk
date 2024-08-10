@@ -21,7 +21,18 @@ open in your favourite editor or IDE
 - ```cd freepbx-16-ubuntu-20.04-installation```
 - ```chmod +x freepbx_16_asterisk_18_install_ubuntu_20.04.sh```
 - ```./freepbx_16_asterisk_18_install_ubuntu_20.04.sh```
+- You will be prompted to select the configs from MakeMenuSelect so you have to select using Arrow Keys
 
+  ![image](https://github.com/user-attachments/assets/8a025846-40c7-4d3d-a606-4b11f4641f58)
+
+- Then, again use the Arrow key to select and enable the music on hold module.
+
+![image](https://github.com/user-attachments/assets/332a0afa-073b-4a3e-82cf-1a1f49fedef2)
+
+- Next, use the Arrow to select and enable the extra sound module as shown below.
+![image](https://github.com/user-attachments/assets/48a91a47-fd4f-4f69-9eac-cf382e005eef)
+
+Once you are done, click on the Save & Exit button to apply the changes.
 
 # Steps to configure in FreePBX and Java Application
 - Goto Config Edit in the Admin tab in FreePBX(you will have to download config edit module)
