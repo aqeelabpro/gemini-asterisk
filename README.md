@@ -3,7 +3,7 @@ This application allows users to dial any sip extension and ask any question fro
 
 # The Easiest Way To Test
 Just install `Zoiper` and Register a SIP user
-- SIP URI: 2000@34.125.220.31
+- SIP URI: 2000@ec2-34-197-147-34.compute-1.amazonaws.com
 - Password: 94d6a19791656fc64f4e55f7867fc407
 
 After Registering The Account, dial extension 111, and follow the instructions in the recording played during the call to ask any questions  
