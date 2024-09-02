@@ -39,6 +39,9 @@ open in your favourite editor or IDE
 
 ### Add Files to `/var/lib/asterisk/sounds/en/`
 you also have to create two wav files of 8k sample rate called `ask_question` `interrupt-ai` and copy to `/var/lib/asterisk/sounds/en/`
+you can use any text in the files like `to ask question wait for beep sound and ask question and press # after completing your question`
+
+inside `ask-question.wav` file and `press any key to interrupt the ai and wait for beep to ask question if you don't want answer to be completed and want to ask other question` inside `interrupt-ai.wav`
 
 
 | ![Figure 1.1](https://github.com/aqeelabpro/gemini-asterisk/assets/93031839/1094e414-5b33-4ff3-a26b-0947ff4f667f "Figure 1.1") | 
