@@ -37,6 +37,10 @@ open in your favourite editor or IDE
 - Click `Standard` and `Extended` in there and hit check online button as shown in `Figure 1.2`
 - You will get `Download All` button, Press that button and it will download all modules including `Config Edit` module, we require as shown in `Figure 1.2`
 
+# Add Files to `/var/lib/asterisk/sounds/en/`
+you also have to create two wav files of 8k sample rate called `ask_question` `interrupt-ai` and copy to `/var/lib/asterisk/sounds/en/`
+
+
 | ![Figure 1.1](https://github.com/aqeelabpro/gemini-asterisk/assets/93031839/1094e414-5b33-4ff3-a26b-0947ff4f667f "Figure 1.1") | 
 |:--:| 
 | *Figure 1.1* |
@@ -46,9 +50,6 @@ open in your favourite editor or IDE
 | *Figure 1.2* |
 ### extensions_custom.conf Code
 ```
-
-# Add Files to `/var/lib/asterisk/sounds/en/`
-you also have to create two wav files of 8k sample rate called `ask_question` `interrupt-ai` and copy to `/var/lib/asterisk/sounds/en/`
 
 [google-speech]
 exten => 111,1,NoOp(============ ${CONTEXT} =============)
