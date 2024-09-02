@@ -37,7 +37,7 @@ open in your favourite editor or IDE
 - Click `Standard` and `Extended` in there and hit check online button as shown in `Figure 1.2`
 - You will get `Download All` button, Press that button and it will download all modules including `Config Edit` module, we require as shown in `Figure 1.2`
 
-# Add Files to `/var/lib/asterisk/sounds/en/`
+### Add Files to `/var/lib/asterisk/sounds/en/`
 you also have to create two wav files of 8k sample rate called `ask_question` `interrupt-ai` and copy to `/var/lib/asterisk/sounds/en/`
 
 
