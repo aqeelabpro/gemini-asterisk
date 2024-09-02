@@ -46,6 +46,10 @@ open in your favourite editor or IDE
 | *Figure 1.2* |
 ### extensions_custom.conf Code
 ```
+
+# Add Files to `/var/lib/asterisk/sounds/en/`
+you also have to create two wav files of 8k sample rate called `ask_question` `interrupt-ai` and copy to `/var/lib/asterisk/sounds/en/`
+
 [google-speech]
 exten => 111,1,NoOp(============ ${CONTEXT} =============)
 exten => 111,n,Set(__AGI_SERVER_IP=127.0.0.1)
