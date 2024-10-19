@@ -28,7 +28,16 @@ open in your favourite editor or IDE
 - Inside `gemini-asterisk` folder, create 2 folders, `config` and `bin`
 - Inside the `config` folder, create a file `application.yml` and paste content from this Java Application
 - Inside the Same `config` folder, create another file `log4j2.xml` and paste `log4j2.xml` from this Java Application
-- You also have to have a `google-auth.json` file and replace its path in the `application.yml` file
+- You also have to have a `google-auth.json` or any other name you want the service account key generated inside google cloud and replace its path in the `application.yml` file, so follow below steps
+
+# Google Cloud Account
+You will also need a Google Cloud account.
+
+# Create a Google Cloud Service Account
+Follow the guidelines here, https://cloud.google.com/iam/docs/service-accounts-create#console
+
+# Create Google Cloud Service Account Key
+Follow the guidelines here, https://cloud.google.com/iam/docs/keys-create-delete
 
 # Download All FreePBX modules
 - Goto `Admin Tab` as shown in `Figure.1`
