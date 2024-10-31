@@ -15,7 +15,10 @@ open in your favourite editor or IDE
 # Prerequisites
 
 - FreePBX installed
-- Zoiper Installed
+- Zoiper/Any other Softphone of your choice(some other popular softphones: linphone, microsip) Installed
+
+# Install Zoiper
+Goto https://www.zoiper.com/en/voip-softphone/download/current and choose it according to your own OS
 
 # Install FreePBX
 - Follow The instructions on [FreePBX Installation on Ubuntu 22.04/23.04](https://blog.piecebyte.com/freepbx-installation-on-ubuntu-22-04-23-04)
@@ -41,17 +44,15 @@ Follow the guidelines here, https://cloud.google.com/iam/docs/keys-create-delete
 
 # Download All FreePBX modules
 - Goto `Admin Tab` as shown in `Figure.1`
-- Select the `Updates` from dropdown as shown in `Figure 1.1`
+- Select the `Updates` from the dropdown as shown in `Figure 1.1`
 - Click The `Modules Updates` as shown in `Figure 1.2`
-- Click `Standard` and `Extended` in there and hit check online button as shown in `Figure 1.2`
-- You will get `Download All` button, Press that button and it will download all modules including `Config Edit` module, we require as shown in `Figure 1.2`
+- Click `Standard` and `Extended` in there and hit the check online button as shown in `Figure 1.2`
+- You will get the `Download All` button, Press that button and it will download all modules including the `Config Edit` module, which we require as shown in `Figure 1.2`
 
 ### Add Files to `/var/lib/asterisk/sounds/en/`
-you also have to create two wav files of 8k sample rate called `ask_question` `interrupt-ai` and copy to `/var/lib/asterisk/sounds/en/`
+you also have to create two wav files of 8k sample rate called `ask_question` `interrupt-ai` and copy them to `/var/lib/asterisk/sounds/en/`
 
-you can use any text in the files like `to ask question wait for beep sound and ask question and press # after completing your question`
-
-inside `ask-question.wav` file and `press any key to interrupt the ai and wait for beep to ask question if you don't want answer to be completed and want to ask other question` inside `interrupt-ai.wav`
+you can use any text in the files like `to ask question wait for beep sound and ask a question and press # after completing your question` inside `ask-question.wav` file and add `press any key to interrupt the ai and wait for the beep to ask the question if you don't want an answer to be completed and want to ask other question` inside `interrupt-ai.wav`
 
 
 | ![Figure 1.1](https://github.com/aqeelabpro/gemini-asterisk/assets/93031839/1094e414-5b33-4ff3-a26b-0947ff4f667f "Figure 1.1") | 
@@ -103,3 +104,10 @@ exten => s,1,NoOp(=========== ${CONTEXT} ===========)
 exten => s,n,StopMonitor()
 exten => s,n,Hangup
 ```
+
+
+#### Asterisk Manager Interface(AMI)
+Learn more about AMI at https://docs.asterisk.org/Configuration/Interfaces/Asterisk-Manager-Interface-AMI/
+
+#### Asterisk Manager Interface(AMI) Libraries in different languages
+https://docs.asterisk.org/Configuration/Interfaces/Asterisk-Manager-Interface-AMI/AMI-Libraries-and-Frameworks/
