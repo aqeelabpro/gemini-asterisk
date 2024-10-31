@@ -1,37 +1,60 @@
+# Path to the ffmpeg executable, which is used for audio processing and manipulation.
 ffmpeg:
   path: /opt/homebrew/bin/ffmpeg
 
+# Logging configuration for the application.
 logging:
+  # Path to the log4j2 configuration file that defines logging behavior.
   config: config/log4j2.xml
   file:
+    # Log file name and location where application logs will be stored.
     name: ../log/google-speech.log
 
+# Server configuration, specifying the port on which the server will listen.
 server:
   port: 8800
   
+# Asterisk configuration for handling AGI (Asterisk Gateway Interface) and AMI (Asterisk Manager Interface).
 asterisk:
   agi:
+    # Host for AGI connections, usually set to localhost.
     host: 127.0.0.1
+    # Port for AGI connections; typically 9000 for Asterisk.
     port: 9000
+    # Maximum number of AGI connections to handle simultaneously.
     poolSize: 500
+    # Maximum size of the connection pool for AGI.
     maximumPoolSize: 3000
   ami:
+    # Host for AMI connections, usually set to localhost.
     host: 127.0.0.1
-    username: <will be provided upon request as it gives complete access to the asterisk pbx>
-    password: <will be provided upon request as it gives complete access to the asterisk pbx>
+    # Username for AMI authentication; must be set in Asterisk configuration.
+    username: <asterisk manager username>
+    # Password for AMI authentication; must be set in Asterisk configuration.
+    password: <asterisk manager password>
 
+# Configuration for originating calls via Asterisk.
 originate:
-  originateTrunk: piecebyte
-  originateContext: OUTBOUND_DIALER
-  originateExtension: s
+  # Name of the trunk used for call origination.
+  originateTrunk: <trunk name>
+  # Context in which the originate extension is defined, usually found in extensions.conf.
+  originateContext: <context defined in extensions.conf>
+  # Extension number defined in the extensions.conf to which calls will be sent.
+  originateExtension: <extension defined in the extensions.conf>
 
+# Audio configuration, specifying the path to Asterisk sound files.
 audio:
-  path: /var/lib/asterisk/sounds/en
+  # Directory where Asterisk sound files are stored, typically for voice prompts.
+  path: <asterisk sounds directory normally /var/lib/asterisk/sounds/en> 
 
+# Google API configuration for utilizing Google services.
 google:
   credentials:
     file:
-      path: /home/ubuntu/google-auth.json
+      # Path to the Google service account key file in JSON format for authentication.
+      path: <google key file<json> path like /home/ubuntu/google-auth.json>
   gemini:
+    # URL for the Gemini API, used for generating content.
     geminiApiUrl: "https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key="
+    # API key for authenticating requests to the Gemini API; replace with your own key.
     geminiApiKey: "REPLACE WITH YOUR OWN GEMINI API KEY"
