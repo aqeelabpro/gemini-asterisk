@@ -1,0 +1,26 @@
+#!/usr/bin/php -q
+<?php
+// Reading AGI environment variables
+function readAgiVariables() {
+    $agiVars = [];
+    while ($line = fgets(STDIN)) {
+        if (trim($line) == '') {
+            break;
+        }
+        list($key, $value) = explode(': ', trim($line), 2);
+        $agiVars[$key] = $value;
+    }
+    return $agiVars;
+}
+
+// Main logic of the AGI script
+$agiVars = readAgiVariables();
+
+// Retrieve the variable MY_VARIABLE
+$myVariable = isset($agiVars['MY_VARIABLE']) ? $agiVars['MY_VARIABLE'] : 'Variable not set';
+
+// Output the result
+echo "SET VARIABLE my_response \"$myVariable\"\n";
+echo "SAY TEXT \"$myVariable\"\n";
+echo "HANGUP\n";
+?>
