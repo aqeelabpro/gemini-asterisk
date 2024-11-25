@@ -1,6 +1,9 @@
 # Gemini Asterisk PBX Integration
 This application allows users to dial any sip extension and ask any question from Gemini
 
+
+# Demo
+[![Watch the video](https://img.youtube.com/vi/_2lJGsCXJoc/0.jpg)](https://youtu.be/_2lJGsCXJoc)
 # Test Locally
 # Clone Repository
 
