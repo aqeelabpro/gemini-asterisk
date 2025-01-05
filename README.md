@@ -13,6 +13,14 @@ git clone https://github.com/aqeelabpro/gemini-asterisk
 ```
 cd gemini-asterisk
 ```
+
+
+### Switch to gemini branch
+
+```
+git switch gemini
+```
+
 open in your favourite editor or IDE
 
 # Prerequisites
