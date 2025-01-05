@@ -1,6 +1,5 @@
-package com.aws.service.google;
-
-import com.aws.dto.SpeechDto;
+package com.google.service.google;
+import com.google.dto.SpeechDto;
 
 import java.io.IOException;
 

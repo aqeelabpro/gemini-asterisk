@@ -1,6 +1,6 @@
-package com.aws.asterisk.ami;
+package com.google.asterisk.ami;
 
-import com.aws.asterisk.AsteriskProperties;
+import com.google.asterisk.AsteriskProperties;
 import org.asteriskjava.manager.DefaultManagerConnection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -18,9 +18,9 @@ public class AsteriskAmiConfig {
 
     @Bean
     @DependsOn({"asteriskEventListener"})
-    DefaultManagerConnection manager(AsteriskEventListener asteriskEventListener) {
+    DefaultManagerConnection manager(com.aws.asterisk.ami.AsteriskEventListener asteriskEventListener) {
         DefaultManagerConnection manager = new DefaultManagerConnection();
-        AsteriskAmiProperties asteriskAmiProperties = asteriskProperties.getAmi();
+        com.aws.asterisk.ami.AsteriskAmiProperties asteriskAmiProperties = asteriskProperties.getAmi();
         manager.setHostname(asteriskAmiProperties.getHost());
         manager.setUsername(asteriskAmiProperties.getUsername());
         manager.setPassword(asteriskAmiProperties.getPassword());
@@ -29,7 +29,7 @@ public class AsteriskAmiConfig {
     }
 
     @Bean("asteriskEventListener")
-    AsteriskEventListener asteriskEventListener() {
-        return new AsteriskEventListener();
+    com.aws.asterisk.ami.AsteriskEventListener asteriskEventListener() {
+        return new com.aws.asterisk.ami.AsteriskEventListener();
     }
 }

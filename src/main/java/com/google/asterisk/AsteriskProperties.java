@@ -1,8 +1,8 @@
-package com.aws.asterisk;
+package com.google.asterisk;
 
 
-import com.aws.asterisk.agi.AsteriskAgiProperties;
-import com.aws.asterisk.ami.AsteriskAmiProperties;
+import com.google.asterisk.agi.AsteriskAgiProperties;
+import com.google.asterisk.ami.AsteriskAmiProperties;
 import lombok.Data;
 import org.springframework.stereotype.Component;
 import org.springframework.boot.context.properties.ConfigurationProperties;

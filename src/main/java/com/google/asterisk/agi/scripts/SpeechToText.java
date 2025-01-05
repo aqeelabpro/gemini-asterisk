@@ -1,7 +1,6 @@
-package com.aws.asterisk.agi.scripts;
+package com.google.asterisk.agi.scripts;
 
 
-import com.aws.asterisk.agi.AgiLogic;
 import org.asteriskjava.fastagi.AgiChannel;
 import org.asteriskjava.fastagi.AgiRequest;
 import org.asteriskjava.fastagi.AgiScript;

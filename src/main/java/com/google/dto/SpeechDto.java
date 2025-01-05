@@ -1,4 +1,4 @@
-package com.aws.dto;
+package com.google.dto;
 
 import lombok.Data;
 

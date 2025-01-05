@@ -1,7 +1,7 @@
-package com.aws.asterisk.agi.strategy;
+package com.google.asterisk.agi.strategy;
 
-import com.aws.asterisk.agi.scripts.SpeechToText;
-import com.aws.asterisk.agi.scripts.TextToSpeech;
+import com.google.asterisk.agi.scripts.SpeechToText;
+import com.google.asterisk.agi.scripts.TextToSpeech;
 import lombok.extern.log4j.Log4j2;
 import org.asteriskjava.fastagi.AgiChannel;
 import org.asteriskjava.fastagi.AgiRequest;

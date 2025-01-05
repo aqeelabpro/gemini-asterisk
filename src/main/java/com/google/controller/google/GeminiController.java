@@ -1,6 +1,6 @@
-package com.aws.controller.google;
+package com.google.controller.google;
 
-import com.aws.service.google.gemini.GeminiService;
+import com.google.service.google.gemini.GeminiService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

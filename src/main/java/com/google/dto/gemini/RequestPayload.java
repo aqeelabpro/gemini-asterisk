@@ -1,4 +1,4 @@
-package com.aws.dto.gemini;
+package com.google.dto.gemini;
 
 import lombok.Data;
 

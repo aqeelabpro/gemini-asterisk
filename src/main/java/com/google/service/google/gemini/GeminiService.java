@@ -1,9 +1,9 @@
-package com.aws.service.google.gemini;
+package com.google.service.google.gemini;
 
-import com.aws.dto.gemini.Content;
-import com.aws.dto.gemini.ContentPart;
-import com.aws.dto.gemini.RequestPayload;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.google.dto.gemini.Content;
+import com.google.dto.gemini.ContentPart;
+import com.google.dto.gemini.RequestPayload;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.json.JSONArray;

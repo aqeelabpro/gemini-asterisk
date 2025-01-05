@@ -1,10 +1,10 @@
-package com.aws.service.google;
+package com.google.service.google;
 
-import com.aws.dto.SpeechDto;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.auth.oauth2.GoogleCredentials;
 import com.google.cloud.speech.v1.*;
 import com.google.cloud.texttospeech.v1.*;
+import com.google.dto.SpeechDto;
 import com.google.protobuf.ByteString;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;

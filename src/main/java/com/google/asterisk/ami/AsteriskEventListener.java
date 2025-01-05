@@ -1,4 +1,4 @@
-package com.aws.asterisk.ami;
+package com.google.asterisk.ami;
 
 import lombok.extern.log4j.Log4j2;
 import org.asteriskjava.manager.ManagerEventListener;
