@@ -25,7 +25,7 @@
         <Console name="ConsoleAppender" target="SYSTEM_OUT" follow="true">
             <PatternLayout pattern="${LOG_PATTERN}"/>
         </Console>
-        <RollingFile name="OneBrainVoiceAppender" fileName="${LOG-PATH}/google-speech.log"
+        <RollingFile name="GoogleVoiceAppender" fileName="${LOG-PATH}/google-speech.log"
                      filePattern="${LOG-PATH}/google-speech-${DATE_PATTERN}.log.zip" append="true">
             <PatternLayout pattern="${LOG_PATTERN}"/>
             <Policies>
@@ -34,7 +34,7 @@
             </Policies>
             <DefaultRolloverStrategy max="10"/>
         </RollingFile>
-        <RollingFile name="OneBrainVoiceErrorAppender" fileName="${LOG-PATH}/google-speech-error.log"
+        <RollingFile name="GoogleVoiceErrorAppender" fileName="${LOG-PATH}/google-speech-error.log"
                      filePattern="${LOG-PATH}/google-speech-error-${DATE_PATTERN}.log.zip" append="true">
             <PatternLayout pattern="${LOG_PATTERN}"/>
             <Policies>
@@ -47,19 +47,19 @@
     <Loggers>
 
         <Logger name="org.asteriskjava.manager.internal.EventBuilderImpl" level="info" additivity="false">
-            <AppenderRef ref="OneBrainVoiceErrorAppender" level="error"/>
+            <AppenderRef ref="GoogleVoiceErrorAppender" level="error"/>
         </Logger>
 
-        <Logger name="com.onebrain" level="info" additivity="false">
+        <Logger name="com.google" level="info" additivity="false">
             <AppenderRef ref="ConsoleAppender" level="info"/>
-            <AppenderRef ref="OneBrainVoiceAppender" level="info"/>
-            <AppenderRef ref="OneBrainVoiceErrorAppender" level="error"/>
+            <AppenderRef ref="GoogleVoiceAppender" level="info"/>
+            <AppenderRef ref="GoogleVoiceErrorAppender" level="error"/>
         </Logger>
 
         <Root level="info">
             <AppenderRef ref="ConsoleAppender" level="info"/>
-            <AppenderRef ref="OneBrainVoiceAppender" level="info"/>
-            <AppenderRef ref="OneBrainVoiceErrorAppender" level="error"/>
+            <AppenderRef ref="GoogleVoiceAppender" level="info"/>
+            <AppenderRef ref="GoogleVoiceErrorAppender" level="error"/>
         </Root>
     </Loggers>
 </Configuration>

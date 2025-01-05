@@ -18,9 +18,9 @@ public class AsteriskAmiConfig {
 
     @Bean
     @DependsOn({"asteriskEventListener"})
-    DefaultManagerConnection manager(com.aws.asterisk.ami.AsteriskEventListener asteriskEventListener) {
+    DefaultManagerConnection manager(AsteriskEventListener asteriskEventListener) {
         DefaultManagerConnection manager = new DefaultManagerConnection();
-        com.aws.asterisk.ami.AsteriskAmiProperties asteriskAmiProperties = asteriskProperties.getAmi();
+        AsteriskAmiProperties asteriskAmiProperties = asteriskProperties.getAmi();
         manager.setHostname(asteriskAmiProperties.getHost());
         manager.setUsername(asteriskAmiProperties.getUsername());
         manager.setPassword(asteriskAmiProperties.getPassword());
@@ -29,7 +29,7 @@ public class AsteriskAmiConfig {
     }
 
     @Bean("asteriskEventListener")
-    com.aws.asterisk.ami.AsteriskEventListener asteriskEventListener() {
-        return new com.aws.asterisk.ami.AsteriskEventListener();
+    AsteriskEventListener asteriskEventListener() {
+        return new AsteriskEventListener();
     }
 }
