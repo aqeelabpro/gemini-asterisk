@@ -1,6 +1,10 @@
 # Gemini Asterisk PBX Integration
 This application allows users to dial any sip extension and ask any question from Gemini
 
+
+# Demo
+[![Watch the video](https://img.youtube.com/vi/_2lJGsCXJoc/0.jpg)](https://youtu.be/_2lJGsCXJoc)
+# Test Locally
 # Clone Repository
 
 ```
@@ -9,44 +13,57 @@ git clone https://github.com/aqeelabpro/gemini-asterisk
 ```
 cd gemini-asterisk
 ```
-open in your favorite editor or IDE
 
-After Opening, checkout in the gemini branch
-
-```
-git checkout gemini
+### Switch to gemini branch
 
 ```
+git switch gemini
+```
+
+open in your favourite editor or IDE
 
 # Prerequisites
 
 - FreePBX installed
-- Zoiper Installed
+- Zoiper/Any other Softphone of your choice(some other popular softphones: linphone, microsip) Installed
+
+# Install Zoiper
+Goto https://www.zoiper.com/en/voip-softphone/download/current and choose it according to your own OS
 
 # Install FreePBX
-- Clone this repository ```https://github.com/aqeelabpro/freepbx-16-ubuntu-20.04-installation```
-- ```cd freepbx-16-ubuntu-20.04-installation```
-- ```chmod +x freepbx_16_asterisk_18_install_ubuntu_20.04.sh```
-- ```./freepbx_16_asterisk_18_install_ubuntu_20.04.sh```
-
+- Follow The instructions on [FreePBX Installation on Ubuntu 22.04/23.04](https://blog.piecebyte.com/freepbx-installation-on-ubuntu-22-04-23-04)
 
 # Steps to configure in FreePBX and Java Application
 - Goto Config Edit in the Admin tab in FreePBX(you will have to download config edit module)
 - Paste the code provided at the end to the `extensions_custom.conf` file, and click `Save` button and the `Apply Config` button at the top
 - create `Jar file` from this Application and upload to server
-- Create a main folder like `gemini-asterisk`
+- Create a main folder like `gemini-asterisk` inside your home dir or whereever you want and also create relevant folders and files in the respective folder as described below
 - Inside `gemini-asterisk` folder, create 2 folders, `config` and `bin`
-- Inside the `config` folder, create 2 files application.yml and paste content from this Java Application
-- Inside the Same `config` folder, create another file `log4j2.xml`, and paste `log4j2.xml` from this Java Application
-- Create a log folder, let's say the main folder `gemini-asterisk` is in /home/ubuntu, create a log folder in same /home/ubuntu
-- 
+- Inside the `config` folder, create a file `application.yml` and paste content from this Java Application
+- Inside the Same `config` folder, create another file `log4j2.xml` and paste `log4j2.xml` from this Java Application
+- You also have to have a `google-auth.json` or any other name you want the service account key generated inside google cloud and replace its path in the `application.yml` file, so follow below steps
+
+# Google Cloud Account
+You will also need a Google Cloud account.
+
+# Create a Google Cloud Service Account
+Follow the guidelines here, https://cloud.google.com/iam/docs/service-accounts-create#console
+
+# Create Google Cloud Service Account Key
+Follow the guidelines here, https://cloud.google.com/iam/docs/keys-create-delete
 
 # Download All FreePBX modules
 - Goto `Admin Tab` as shown in `Figure.1`
-- Select the `Updates` from dropdown as shown in `Figure 1.1`
+- Select the `Updates` from the dropdown as shown in `Figure 1.1`
 - Click The `Modules Updates` as shown in `Figure 1.2`
-- Click `Standard` and `Extended` in there and hit check online button as shown in `Figure 1.2`
-- You will get `Download All` button, Press that button and it will download all modules including the `Config Edit` module, which we require as shown in `Figure 1.2`
+- Click `Standard` and `Extended` in there and hit the check online button as shown in `Figure 1.2`
+- You will get the `Download All` button, Press that button and it will download all modules including the `Config Edit` module, which we require as shown in `Figure 1.2`
+
+### Add Files to `/var/lib/asterisk/sounds/en/`
+you also have to create two wav files of 8k sample rate called `ask_question` `interrupt-ai` and copy them to `/var/lib/asterisk/sounds/en/`
+
+you can use any text in the files like `to ask question wait for beep sound and ask a question and press # after completing your question` inside `ask-question.wav` file and add `press any key to interrupt the ai and wait for the beep to ask the question if you don't want an answer to be completed and want to ask other question` inside `interrupt-ai.wav`
+
 
 | ![Figure 1.1](https://github.com/aqeelabpro/gemini-asterisk/assets/93031839/1094e414-5b33-4ff3-a26b-0947ff4f667f "Figure 1.1") | 
 |:--:| 
@@ -57,6 +74,7 @@ git checkout gemini
 | *Figure 1.2* |
 ### extensions_custom.conf Code
 ```
+
 [google-speech]
 exten => 111,1,NoOp(============ ${CONTEXT} =============)
 exten => 111,n,Set(__AGI_SERVER_IP=127.0.0.1)
@@ -97,27 +115,9 @@ exten => s,n,StopMonitor()
 exten => s,n,Hangup
 ```
 
-##### Copy The Files from `resources/static/` to your VM's `/var/lib/asterisk/sounds/en/` folder where FreePBX is installed
-```
-scp -r resources/static/*.wav vmName@host:/var/lib/asterisk/sounds/en/
-```
 
-# Test Locally
-If you want to test locally installing FreePBX on your local computer then comment
-```
-                <excludes>
-                    <exclude>**/application.yml</exclude>
-                    <exclude>**/application-development.yml</exclude>
-                    <exclude>**/application-production.yml</exclude>
-                    <exclude>**/log4j2.xml</exclude>
-                </excludes>
-```
-in the `pom.xml` and follow other steps in the  `Steps to configure in FreePBX and Java Application` section
+#### Asterisk Manager Interface(AMI)
+Learn more about AMI at https://docs.asterisk.org/Configuration/Interfaces/Asterisk-Manager-Interface-AMI/
 
-# The Easiest Way To Test
-Just install `Zoiper` and Register a SIP user
-- SIP URI: 2000@34.125.220.31
-- Password: 94d6a19791656fc64f4e55f7867fc407
-
-After Registering The Account, dial extension 111, and follow the instructions in the recording played during the call to ask any questions  
-it has some latency due to the conversion of speech-to-text and text-to-speech using Google
+#### Asterisk Manager Interface(AMI) Libraries in different languages
+https://docs.asterisk.org/Configuration/Interfaces/Asterisk-Manager-Interface-AMI/AMI-Libraries-and-Frameworks/
